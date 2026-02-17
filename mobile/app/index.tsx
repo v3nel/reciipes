@@ -1,13 +1,13 @@
-import { router } from 'expo-router';
-import { Plus } from 'lucide-react-native';
+import { Logosvg } from '@/components/svgs';
 import { Text, View } from 'react-native';
 
 export default function HomeScreen() {
     return (
-        <View className="flex-1 items-center justify-center bg-background gap-4">
-            <Text className="text-lg font-semibold text-primary">
-                Bienvenue sur Reciipes
+        <View className="flex-1 items-center bg-background gap-4">
+            <Text className="text-2xl font-semibold text-primary font-itim ">
+                Reciipes
             </Text>
+            <Logosvg />
         </View>
     );
 }

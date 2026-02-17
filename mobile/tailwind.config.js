@@ -4,6 +4,9 @@ module.exports = {
     presets: [require('nativewind/preset')],
     theme: {
         extend: {
+            fontFamily: {
+                itim: ['Itim'],
+            },
             colors: {
                 primary: '#244E61',
                 secondary: "#9BB5CF",
