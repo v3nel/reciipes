@@ -6,6 +6,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 itim: ['Itim'],
+                sora: ['Sora-Regular', 'sans-serif']
             },
             colors: {
                 primary: '#244E61',
