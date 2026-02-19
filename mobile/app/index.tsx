@@ -3,7 +3,7 @@ import { Logosvg } from '@/components/svgs';
 import { router } from 'expo-router';
 import { Text, View } from 'react-native';
 
-export default function HomeScreen() {
+export default function Onboarding() {
     return (
         <View className="flex-1 items-center bg-background gap-4 px-6 py-2 justify-between">
             <Text className="text-2xl font-semibold text-primary font-itim ">
