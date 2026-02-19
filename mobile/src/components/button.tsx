@@ -11,7 +11,7 @@ interface ButtonProps {
     iconColor?: string;
 }
 
-export default function Button({
+export function Button({
     style = 'primary',
     ratio = 'full',
     Icon,

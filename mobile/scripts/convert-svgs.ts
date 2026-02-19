@@ -87,6 +87,9 @@ function convertSvgToComponent(svgContent: string, componentName: string): strin
 
   const defaultViewBox = attrs.viewBox || `0 0 ${attrs.width || '24'} ${attrs.height || '24'}`;
   const imports = usedComponents.length > 0 ? `, { ${usedComponents.join(', ')}, SvgProps }` : ', { SvgProps }';
+  
+  // Utiliser la couleur originale du SVG ou noir par défaut au lieu de "none"
+  const defaultFill = attrs.fill && attrs.fill !== 'none' ? attrs.fill : '#000000';
 
   return `import React from 'react';
 import Svg${imports} from 'react-native-svg';
@@ -98,8 +101,8 @@ interface ${componentName}Props extends SvgProps {
 }
 
 export const ${componentName}: React.FC<${componentName}Props> = ({
-  width = ${attrs.width || '24'},
-  height = ${attrs.height || '24'},
+  width = '${attrs.width || '50px'}',
+  height = '${attrs.height || '50px'}',
   color,
   ...props
 }) => {
@@ -108,7 +111,7 @@ export const ${componentName}: React.FC<${componentName}Props> = ({
       width={width}
       height={height}
       viewBox="${defaultViewBox}"
-      fill={color || "none"}
+      fill={color || "${defaultFill}"}
       {...props}
     >
       ${innerContent}

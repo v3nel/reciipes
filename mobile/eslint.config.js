@@ -18,6 +18,7 @@ module.exports = defineConfig([
             'babel.config.js',
             'metro.config.js',
             'tailwind.config.js',
+            '**/_layout.tsx'
         ],
     },
     {

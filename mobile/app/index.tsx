@@ -1,5 +1,6 @@
-import Button from '@/components/button';
+import { Button } from '@/components/components';
 import { Logosvg } from '@/components/svgs';
+import { router } from 'expo-router';
 import { Text, View } from 'react-native';
 
 export default function HomeScreen() {
@@ -18,6 +19,7 @@ export default function HomeScreen() {
             <View className="w-full gap-2 items-center justify-center">
                 <Button
                     text='Yesss!!!'
+                    onPress={() => router.replace("/login")}
                 />
                 <Button
                     text="Euhhh.. peut-être plus tard"
